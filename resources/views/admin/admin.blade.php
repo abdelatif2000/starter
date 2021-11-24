@@ -1,0 +1,1 @@
+<h1> {{__('messages.hello')} </h1>
