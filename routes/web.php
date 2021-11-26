@@ -37,6 +37,7 @@
 // // return  "test4";
 
 // // });
+
 $data=[
     'name'=>"abdelatif", 
     "age"=>'21'
@@ -52,5 +53,11 @@ Route::get("/",function(){
 Auth::routes(["verify"=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware("verified");
+
+ Route::group(['prefix'=>'offer'],function(){
+     Route::get("getOffers",'CRUDController@getOffers');
+     Route::get("create",'CRUDController@create');
+     Route::post("add",'CRUDController@add')->name("submit");
+ });
 
 

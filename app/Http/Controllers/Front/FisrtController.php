@@ -8,6 +8,4 @@ class FirstController extends Controller
 {
     //hello word 
 }
-class tests{
 
-}
